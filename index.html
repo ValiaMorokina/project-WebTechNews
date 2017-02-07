@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Markup</title>
+
+	<!--Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<style>
+		
+		* {
+			margin: 0;
+			padding: 0;		
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+	 
+		body{
+			color: white;
+			font-size: 20px;
+			font-family: Arial, sans-serif;
+		}
+ 		
+        input:hover {border:2px solid red;}
+			
+		:checked + span {
+            color: yellow;
+            font-weight: bold;  
+        }
+
+		/*HEADER*/
+
+		header{
+			margin-bottom: 0px;
+		}
+		
+		.inner-header{
+			background: #3d3c66;
+			min-height: 155px;
+			text-align: center;
+		}
+
+		.inner-header h1{
+			padding-top : 86px;
+		}
+
+		/*NAVIGATION*/
+
+		nav{
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+			padding: 2%;
+			background-color: #3d3c66;
+		}
+
+		nav ul{
+			display: inline-block;
+		}
+
+		nav ul li{
+			display: inline-block;
+			margin: 5px;
+		}
+
+		nav ul li a{
+			padding: 3px;
+			text-decoration: none;
+			font-weight: bold;
+			font-family: Arial, sans-serif;
+			color: #ff7733;
+		}
+
+		nav ul li a:hover{
+			color: #99ffcc;
+			background-color: #000000;
+		}
+
+		/*CONTENT*/
+
+		/* ---Media queries ---------------- */
+
+		@media screen and (min-width:600px) {
+		  .sidebar {
+		    float: right;
+		    width: 25%;
+		    padding-left: 10px;
+		  }
+		  .content {
+		  	width: 75%;
+		    margin-right: 25%;
+		  }
+		  .table1{
+			margin-left: 75px;
+		   }
+		}
+		@media screen and (max-width:599px) {
+		    .sidebar{
+			padding-left: 10px;
+			}
+			.table1{
+			margin-left: 1px;
+		    }
+		}
+
+		/* --------------------------------*/
+		
+		.inner-content{		
+			min-height: 500px;
+			padding: 3%;
+			background-color: #293d3d;
+		}
+		.wrapper{
+			background-color: #3d5c5c;
+		}
+
+		/*SIDEBAR*/
+		
+		.inner-sidebar{		
+			min-height: 500px;
+			padding: 3%;
+			background: #3d5c5c;
+		}
+
+		.photos{
+			padding-top: 15%;
+			padding-left: 25%;
+			align-content: center;
+			font-size: 16px;
+		}
+
+		/*ClearFix*/
+		.row:after {
+		 visibility: hidden;
+		 display: block;
+		 font-size: 0;
+		 content: " ";
+		 clear: both;
+		 height: 0;
+		 }
+		.row { display: inline-block; }
+		* html .row { height: 1%; }
+		.row { display: block; }
+		
+		/*section form-Technology*/
+
+		.tech-Name{
+			padding-left: 1%;
+		}
+
+		.form-Technology h2{
+			color: #33ffff;
+		}
+
+		/* section-One */
+
+		.article-Columned{
+			-webkit-column-count: 3;
+    		-moz-column-count: 3;
+          	column-count: 3;
+ 			-webkit-column-width: 200px;
+    		-moz-column-width: 200px;
+          	column-width: 200px;
+          	-webkit-column-gap: 4em;
+    		-moz-column-gap: 4em;
+          	column-gap: 4em;
+          	-webkit-column-rule: 1px dotted #ddd;
+    		-moz-column-rule: 1px dotted #ddd;
+        	column-rule: 1px dotted #ddd;
+        	font-size: 16px;
+		}
+
+		/*section-Two*/
+
+		.section-Two{
+			margin-top: 3%;
+		}
+
+		.section-Two h2{
+			text-align: center;
+			color: #33ffff;
+		}
+
+		.feature-Css {
+		  	max-width: 600px;
+		 	margin: 0 auto; 
+		 	font-size: 16px;
+		}
+
+		.table1{
+			text-align: center;
+			border-spacing: 5px;
+		}
+
+		.article-Four{
+			margin-top: 1%;
+			margin-left: 3%;
+		}
+
+		/*Animation for banner */
+
+	    @keyframes text1
+	    {
+	        10%{opacity: 1;}
+	        40%{opacity: 0;}
+	    }  
+	    @keyframes text2
+	    {
+	        30%{opacity: 0;}
+	        60%{opacity:1;}
+	    }
+	    @keyframes banner
+	    {
+	        10%{background-color: #008978;}
+	        40%{background-color: #34495e;}
+	        80%{background-color: green;}
+	    }
+	    .banner
+	    {
+	        max-width: 300px;
+	        min-height: 120px;
+	        background-color: #777;
+	        margin: 0 auto;
+	        position: relative;
+	    }
+	    .text1,.text2
+	    {
+	        position: absolute;
+	        width: 100%;
+	        height: 100%;
+	        line-height: 120px;
+	        text-align: center;
+	        font-size: 40px;
+	        color: #fff;
+	        opacity: 0;
+	    }
+	 
+	    .text1
+	    {
+	        animation : text1 6s infinite;
+	    }
+	 
+	    .text2
+	    {
+	        animation : text2 6s infinite;
+	    }
+	 
+	    .animated
+	    {
+	        opacity: 0.8;
+	        position: absolute;
+	        width: 100%;
+	        height: 100%;  
+	        background-color: #34495e;
+	        animation: banner 6s infinite;
+	    }
+	    /* Animation for banner ends */
+
+	    /*FOOTER*/
+
+		footer{			
+			margin-top: 0px;
+		}
+		
+		.inner-footer{
+			padding: 3%;
+			min-height: 200px;
+			background: #3d3c66;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.footer-links{
+			text-transform: none;
+		}
+
+		.social{
+		padding-left: 55px;
+		text-decoration: none;
+		color: white;
+		}
+		.social a{
+		 text-decoration: none;
+		 color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="inner-header" id="Home">
+				<!-- navigation -->
+				<nav>
+					<ul class="row">
+						<li><a href="#Home"> Home </a></li>
+						<li><a href="#"> About </a></li>
+						<li><a href="#"> MyApps </a></li>
+						<li><a href="#News"> News </a></li>
+						<li><a href="#Contacts"> Contacts</a></li>
+					</ul>
+				</nav> <!--/navigation--> 
+				<h1>WebTech</h1>
+			</div> <!-- ./inner-header -->
+		</header>
+		<div class="row"> 
+			<!-- SideBar -->
+			<div class="sidebar">
+				<div class="inner-sidebar">
+					<p>
+						<!-- Sidebar content -->
+					</p>
+					<!-- Login Form -->
+					<div class="login-Form">
+					    <p> Login: </p>
+						<form>
+				            <p><input type="text" name="login" placeholder="login" required /></p>
+				            <p><input type="password" name="userPass" placeholder="password" required /></p>
+				            <input type="submit" value="Enter" />
+						</form>
+					</div> <!-- ./login-Form -->
+
+					<div class="photos">
+						<p>Photo of the Month:</p>
+						<figure>
+							<figcaption>February</figcaption>
+							<img src="http://placehold.it/155x155" alt="photo1">
+						</figure>
+						<p>Lorem ipsum dolor
+						</p>
+					</div> <!-- ./photos -->
+
+					<br>
+					<br>
+					<!-- BANNER Animation-->						
+					<div class="banner" id="Banner1">
+						<div class="animated">
+						    <div class="text1">WebTech 
+						    </div>
+						    <div class="text2">WebApps
+						    </div>
+						</div>
+					 </div>	<!-- ./banner -->
+
+				</div> <!-- ./inner-sidebar -->
+			</div> <!-- ./sidebar -->
+
+			<!-- .content -->
+			<div class="content">
+				<div class="inner-content">
+
+				 	<section class="form-Technology">
+				 		<form id="formTechno">
+							<h2>Choose technology</h2>
+							<p>
+								<input type="checkbox" checked name="html5"/><span class="tech-Name">HTML5</span>
+							</p>
+							<p>
+								<input type="checkbox" name="javascript"/><span class="tech-Name">JavaScript</span>
+							</p>
+							<p>
+								<input type="checkbox" name="angular"/><span class="tech-Name">AngularJS</span>
+							</p>
+							 
+							<h2>Platform</h2>
+							<p>
+								<input type="radio" value="windows" checked name="platform"/><span class="tech-Name">Windows</span>
+							</p>
+							<p>
+								<input type="radio" value="mac" name="platform"/><span class="tech-Name">Mac</span>
+							</p>
+						</form>
+				 	</section> <!-- ./form-Technology -->
+				 	<section class="section-One">
+				 		<br>
+				 		<h2>Lorem ipsum dolor sit amet</h2>
+				 		<br>
+				 		<!-- article-Columned -->
+				 		<article class="article-Columned">
+				 			<h3>Lorem ipsum dolor</h3>
+				 			<p>
+				 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				 			</p>
+				 			<p>
+				 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				 			</p>
+				 			<p>
+				 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				 			</p>
+				 		</article><!-- ./article-Columned -->
+				 		
+				 	</section><!-- ./section-One -->
+
+				 	<section class="section-Two" id="News">
+				 		<p>
+				 			<h2> WebTech News</h2>
+				 		</p>
+				 		<br>
+				 		<!-- article-One -->
+				 		<article class="article-One">
+				 			<div class="feature-Css"> 
+				 				<h3> Lorem ipsum </h3>
+								<div>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.						
+								</div>
+								<br>
+								<!-- TABLE -->
+								<table class="table1">
+									    <caption>Table header</caption>
+									    <thead>
+									      <tr>
+									        <th>Column1</th>
+									        <th>Column2</th>
+									        <th>Column3</th>
+									        <th>Column4</th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									      <tr>
+									          <td>text</td>
+									          <td>text</td>
+									          <td>text</td>
+									          <td>text</td>
+									      </tr>
+									      <tr>
+									          <td>text</td>
+									          <td>text</td>
+									          <td>text</td>
+									          <td>text</td>
+									      </tr>
+									    </tbody>
+									    <tfoot>
+									      <tr>
+									        <td>text</td>
+									        <td>text</td>
+									        <td>text</td>
+									        <td>text</td>
+									      </tr>
+									    </tfoot>
+								  </table>
+							</div> <!-- ./feature-Css -->
+				 		</article> <!-- ./article-One -->
+
+				 		<br>
+				 		<!-- article-Two -->
+				 		<article class="article-Two">
+				 			<div class="feature-Css"> 
+				 				<h3> Feature-Css-Content-layout</h3>
+								<div>
+									Using max-width instead of width in this situation will improve the browser's handling
+									of small windows. This is important when making a site usable on mobile. Resize this page to check it out!
+									By the way, max-width is supported by all major browsers including IE7+ so you shouldn't be afraid of using it.						
+								</div>
+							</div> <!-- #/feature-Css -->
+
+				 		</article> <!-- ./article-Two -->
+
+				 		<br>
+				 		<!-- article-Three -->
+				 		<article class="article-Three">
+				 			<div class="feature-Css"> 
+				 				<h3> Lorem ipsum </h3>
+								<div>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.						
+								</div>
+							</div> <!-- ./feature-Css -->
+				 		</article> <!-- ./article-Three -->
+
+				 		<br>
+				 		<!-- article-Four -->
+				 		<article class="article-Four">
+				 			<details>
+								<summary>Lorem ipsum </summary>
+								<ul>
+									<li>iPhone 6S Plus</li>
+									<li>Nexus 6P</li>
+									<li>Galaxy S6 Edge</li>
+									<li>Lumia 950 </li>
+								</ul>
+							</details>
+				 		</article><!-- ./article-Four -->
+
+				 	</section>	
+
+				</div> <!-- ./inner-content -->
+			</div> <!-- ./content -->
+		</div> <!-- ./row -->
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="inner-footer">
+				 <address> 
+				 	<p id="Contacts">
+						Contacts: 
+						<p>
+						Email to: someAddress@gmail.com
+						</p>				
+					</p>
+				 </address>
+				 <br>
+				 <br>
+				 <div class="footer-links">
+				    <span class="social"> <i class="fa fa-twitter"></i>  <a class="tw" href="https://twitter.com" target="_blank"> Twitter </a> </span>
+					<span class="social"> <i class="fa fa-facebook-square"></i> <a class="fb" href="https://facebook.com" target="_blank"> Facebook </a> </span>
+					<span class="social"> <i class="fa fa-google"></i> <a class="gg" href="https://google.com" target="_blank"> Google </a> </span>					
+				</div> <!-- ./footer-links -->
+			</div><!-- ./inner-footer -->
+		</footer>
+	</div> <!-- ./wrapper -->
+</body>
+</html>
